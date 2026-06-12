@@ -1,25 +1,69 @@
+/* ==========================================
+   CONFIGURACIÓN DE LA GALERÍA (Fondo y distribución)
+   ========================================== */
+body {
+  background-color: #f4f5f7; /* Plata claro de fondo de página */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
 div.gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center; /* Centra los autos en la pantalla */
+  gap: 20px; /* Espacio uniforme entre cada tarjeta */
+  padding: 20px;
 }
 
+/* ==========================================
+   TARJETA DE CADA AUTO (Gris plata con detalles)
+   ========================================== */
 div.gallery-item {
-  margin: 5px;
-  border: 1px solid #ccc;
-  width: 180px;
+  background-color: #ffffff; /* Fondo blanco para resaltar el auto */
+  border: 1px solid #cbd5e1; /* Borde plateado oscuro */
+  border-radius: 8px; /* Bordes redondeados modernos */
+  width: 240px; /* Un poco más ancho para que se aprecien mejor los autos */
+  overflow: hidden; /* Corta las esquinas de las imágenes que se salgan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave debajo */
+  transition: all 0.3s ease; /* Transición suave para el efecto hover */
 }
 
+/* EFECTO AL PASAR EL MOUSE (Enfoque elegante) */
 div.gallery-item:hover {
-  border: 1px solid #777;
+  border: 1px solid #0a192f; /* El borde cambia a azul marino */
+  transform: translateY(-5px); /* El auto se eleva ligeramente */
+  box-shadow: 0 8px 20px rgba(10, 25, 47, 0.15); /* Sombra más profunda con toque azul */
 }
 
+/* IMÁGENES DE LOS AUTOS */
 div.gallery-item img {
   width: 100%;
-  height: auto;
+  height: 160px; /* Altura fija para que todas las tarjetas midan lo mismo */
+  object-fit: cover; /* Ajusta la foto del carro sin deformarla */
+  border-bottom: 3px solid #0a192f; /* Línea divisoria en azul marino */
+  transition: transform 0.3s ease;
 }
 
+/* Efecto de zoom sutil en la foto al pasar el mouse */
+div.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   DESCRIPCIÓN / NOMBRE DEL AUTO (Negro y Azul)
+   ========================================== */
 div.gallery-item div.desc {
   padding: 15px;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #0f172a; /* Color negro profundo para el texto */
+  background-color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* El nombre del auto cambia a azul marino al seleccionarlo */
+div.gallery-item:hover div.desc {
+  color: #172a45;
 }
