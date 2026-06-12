@@ -1,68 +1,106 @@
-html {
-  background-color: #BBA9BB;
-  font-family: "Open Sans", sans-serif;
-  margin: 0; padding: 0; 
-  box-sizing: border-box;
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL Y VARIABLES
+   ========================================== */
+:root {
+    --azul-marino: #0a192f;
+    --azul-electrico: #172a45;
+    --plata-claro: #f4f5f7;
+    --plata-oscuro: #cbd5e1;
+    --negro-profundo: #0f172a;
+    --blanco: #ffffff;
 }
 
 body {
-width: 70%;
-margin: 0 auto;
-background-color: #00FFFF;
-padding: 0 15px 15px 15px; 
-border: 5px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--plata-claro);
+    color: var(--negro-profundo);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-h1 { 
-text-align: center; 
-margin: 0; 
-padding: 10px 0; 
-color: #32CD32;
-
-p{ 
- color: blue;
+/* ==========================================
+   2. ENCABEZADO Y NAVEGACIÓN (Primer div)
+   ========================================== */
+div:first-of-type {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--plata-oscuro);
 }
 
-li{
-  color: blue;
- }
-}
-@media only screen and(max-width:400px){
-h1 {
-  font-size: 2vw;
-  text-aling: center;
-  margin:0;
-  padding: 10px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+div:first-of-type h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-p{
-   font-size: 1vw;
- }
-
-li {
-    font-size: 1vw;
- }
+div:first-of-type ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-@media only screen and(min-width:401px) and (max-width:1980px){
-h1 {
-  font-size: 5vw;
-  text-aling: center;
-  margin:0;
-  padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+div:first-of-type ul li a {
+    color: var(--plata-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-p{
-   font-size: 3vw;
- }
-
-li {
-    font-size: 3vw;
- }
+div:first-of-type ul li a:hover {
+    color: var(--blanco);
+    border-bottom: 2px solid var(--blanco);
 }
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL (Segundo div)
+   ========================================== */
+div:nth-of-type(2) {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--plata-oscuro);
+}
+
+/* Estilos para imágenes e iframe */
+div:nth-of-type(2) iframe, 
+div:nth-of-type(2) img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid var(--azul-marino);
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Textos */
+div:nth-of-type(2) h2 {
+    color: var(--azul-marino);
+    font-size: 1.8rem;
+    margin-top: 20px;
+    border-left: 5px solid var(--azul-marino);
+    padding-left: 10px;
+}
+
+div:nth-of-type(2) p {
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+/* ==========================================
+   4. PIE DE PÁGINA Y BOTÓN (Tercer div y extras)
+   ========================================== */
+div:last-of-type
   
 
