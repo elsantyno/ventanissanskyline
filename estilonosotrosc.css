@@ -1,35 +1,112 @@
-* {
-  padding: 2px;
-  box-sizing: border-box;
-}
-
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================== */
 body {
-  font-family: Open Sans, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7; /* Plata claro */
+    color: #0f172a; /* Negro profundo */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
+/* ==========================================
+   2. ENCABEZADO Y NAVEGACIÓN (#encabezado)
+   ========================================== */
 #encabezado {
-  background-color: #A19CAD;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-  height: auto;
+    background-color: #0a192f; /* Azul marino */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #cbd5e1; /* Borde plateado */
 }
 
+#encabezado h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Lista de navegación */
 .navbar {
-        margin: 0 px;
-        padding: 0 px;
-        text-align: left;
-        font-size: 18px;
-        list-style-type:none;
-        height: auto;
-        background-color: #C2BFCA;
-        }
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar li a {
+    color: #cbd5e1; /* Plata oscuro */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL (#pagina)
+   ========================================== */
+#pagina {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
 #columna_principal {
-  float: left;
-  width: 70%;
-  height: 700px;
-  background-color: #FFFFFF;
+    background-color: #ffffff; /* Fondo blanco para las tarjetas de texto */
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
+/* Títulos de sección (Nosotros y Misión) */
+#columna_principal h2, 
+#columna_principal h3 {
+    color: #0a192f; /* Azul marino */
+    border-left: 5px solid #0a192f;
+    padding-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+#columna_principal h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+#columna_principal h3 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+}
+
+/* Párrafos */
+#columna_principal p {
+    font-size: 1.1rem;
+    color: #334155; /* Gris oscuro para lectura cómoda */
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ==========================================
+   4. REPRODUCTOR DE VIDEO
+   ========================================== */
+video {
+    display: block;
+    width: 100%;
+    max-width: 500px; /* Tamaño máximo adaptado */
+    height: auto;
+    margin: 30px auto; /* Centrado con espacio arriba y abajo */
+    border: 3px solid #0a192f; /* Borde azul marino */
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #0f172a; /* Fondo negro mientras carga */
+}
